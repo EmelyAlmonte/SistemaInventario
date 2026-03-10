@@ -25,6 +25,19 @@ public class InventarioImpl implements Inventario {
     }
 
     @Override
+public void mostrarProductos() {
+
+    if (productos.isEmpty()) {
+        System.out.println("No hay productos registrados.");
+        return;
+    }
+
+    for (Producto producto : productos) {
+        System.out.println(producto);
+    }
+}
+
+    @Override
     public List<Producto> obtenerProductos() {
         return productos;
     }
