@@ -5,13 +5,17 @@ public class ServicioInventario {
         this.inventario = inventario;
     }
 
-    public void registrarProducto(String codigo, String nombre, int stock) {
+    public void registrarProducto(String codigo, String nombre, int stock, double precio) {
         if (stock < 0) {
             System.out.println("Error: el stock no puede ser negativo.");
             return;
         }
+          if (precio < 0) {
+            System.out.println("Error: el precio no puede ser negativo.");
+            return;
+        }
 
-        Producto producto = new Producto(codigo, nombre, stock);
+        Producto producto = new Producto(codigo, nombre, stock, precio);
         inventario.agregarProducto(producto);
     }
 

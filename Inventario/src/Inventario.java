@@ -3,7 +3,7 @@ public interface Inventario {
 
     void agregarProducto(Producto producto);
 
-    void eliminarProducto(String nombre);
+    void eliminarProducto(String codigo);
 
     Producto buscarProducto(String nombre);
 
