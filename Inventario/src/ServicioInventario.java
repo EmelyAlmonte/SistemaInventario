@@ -10,13 +10,18 @@ public class ServicioInventario {
             System.out.println("Error: el stock no puede ser negativo.");
             return;
         }
-          if (precio < 0) {
+        if (precio < 0) {
             System.out.println("Error: el precio no puede ser negativo.");
+            return;
+        }
+        if (inventario.buscarProducto(codigo) != null) {
+            System.out.println("Error: ya existe un producto con ese codigo.");
             return;
         }
 
         Producto producto = new Producto(codigo, nombre, stock, precio);
         inventario.agregarProducto(producto);
+        System.out.println("Producto registrado correctamente.");
     }
 
     public void consultarProducto(String codigo) {

@@ -5,7 +5,7 @@ public interface Inventario {
 
     void eliminarProducto(String codigo);
 
-    Producto buscarProducto(String nombre);
+    Producto buscarProducto(String codigo);
 
     void mostrarProductos();
 
