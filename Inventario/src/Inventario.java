@@ -1,3 +1,4 @@
+import java.util.List;
 public interface Inventario {
 
     void agregarProducto(Producto producto);
@@ -6,6 +7,6 @@ public interface Inventario {
 
     Producto buscarProducto(String nombre);
 
-    void mostrarProductos();
+        List<Producto> obtenerProductos();
 
 }
