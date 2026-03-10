@@ -15,6 +15,19 @@ public class InventarioImpl implements Inventario {
     }
 
     @Override
+public void eliminarProducto(String codigo) {
+
+    Producto producto = buscarProducto(codigo);
+
+    if (producto != null) {
+        productos.remove(producto);
+        System.out.println("Producto eliminado correctamente.");
+    } else {
+        System.out.println("Producto no encontrado.");
+    }
+}
+
+    @Override
     public Producto buscarProducto(String codigo) {
         for (Producto producto : productos) {
             if (producto.getCodigo().equalsIgnoreCase(codigo)) {
