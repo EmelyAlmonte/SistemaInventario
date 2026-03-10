@@ -7,6 +7,8 @@ public interface Inventario {
 
     Producto buscarProducto(String nombre);
 
-        List<Producto> obtenerProductos();
+    void mostrarProductos();
+
+    List<Producto> obtenerProductos();
 
 }
